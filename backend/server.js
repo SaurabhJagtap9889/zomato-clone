@@ -13,15 +13,12 @@ connectDB();
 // Middleware
 app.use(cors({
     origin: process.env.NODE_ENV === 'production' 
-        ? process.env.FRONTEND_URL 
+        ? [process.env.FRONTEND_URL, 'https://*.railway.app']
         : ['http://127.0.0.1:5500', 'http://localhost:5500'],
     credentials: true
 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
-// Serve static files from frontend directory
-app.use(express.static(path.join(__dirname, '../frontend')));
 
 // API Routes
 app.use('/api/restaurants', require('./routes/restaurants'));
@@ -32,6 +29,19 @@ app.use('/api/users', require('./routes/users'));
 app.get('/api/hello', (req, res) => {
     res.json({ msg: 'Hello from backend' });
 });
+
+// Serve static files from frontend build directory in production
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static(path.join(__dirname, '../frontend/dist')));
+    
+    // Handle React routing, return all requests to React app
+    app.get('*', (req, res) => {
+        res.sendFile(path.join(__dirname, '../frontend/dist/index.html'));
+    });
+} else {
+    // Serve static files from frontend directory in development
+    app.use(express.static(path.join(__dirname, '../frontend')));
+}
 
 // Error handling middleware
 app.use((err, req, res, next) => {
