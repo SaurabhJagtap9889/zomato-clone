@@ -1,8 +1,8 @@
+require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const cors = require('cors');
 const connectDB = require('./config/db');
-require('dotenv').config();
 
 // Initialize express app
 const app = express();
@@ -30,18 +30,13 @@ app.get('/api/hello', (req, res) => {
     res.json({ msg: 'Hello from backend' });
 });
 
-// Serve static files from frontend build directory in production
-if (process.env.NODE_ENV === 'production') {
-    app.use(express.static(path.join(__dirname, '../frontend/dist')));
-    
-    // Handle React routing, return all requests to React app
-    app.get('*', (req, res) => {
-        res.sendFile(path.join(__dirname, '../frontend/dist/index.html'));
-    });
-} else {
-    // Serve static files from frontend directory in development
-    app.use(express.static(path.join(__dirname, '../frontend')));
-}
+// Serve static files from the frontend directory
+app.use(express.static(path.join(__dirname, '../frontend')));
+
+// Serve index.html for all other routes
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../frontend/index.html'));
+});
 
 // Error handling middleware
 app.use((err, req, res, next) => {
