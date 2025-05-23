@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Zomato Clone</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="navbar">
+    <div class="logo">zomato</div>
+    <div class="location-search">
+      <input type="text" placeholder="Pune" class="location-box" />
+      <input type="text" placeholder="Search for restaurant, cuisine or a dish" class="search-box" />
+    </div>
+    <div class="auth-links">
+      <a href="#">Log in</a>
+      <a href="#">Sign up</a>
+    </div>
+    <div id="cart-navbar-placeholder"></div>
+  </header>
+
+  <!-- Nav Tabs -->
+  <nav class="tabs">
+    <div class="tab">Dining Out</div>
+    <div class="tab active">Delivery</div>
+    <div class="tab">Nightlife</div>
+  </nav>
+
+  <!-- Filter Buttons -->
+  <section class="filters">
+    <button>Filters</button>
+    <button>Pure Veg</button>
+    <button>Cuisines</button>
+  </section>
+
+  <!-- Example for three main sections -->
+  <section class="section js-main-section" id="dining-section" style="display:block;">
+    <!-- Dining Out content here -->
+    <!-- Inspiration Section -->
+    <section class="section">
+      <h2>Inspiration for your first order</h2>
+      <div class="scroll-row">
+        <div class="category">
+          <img src="https://i.ibb.co/V8PCGyN/biryani.jpg" alt="Biryani" />
+          <p>Biryani</p>
+        </div>
+        <div class="category">
+          <img src="https://i.ibb.co/cSgW4P2f/pizza.jpg" alt="Pizza" />
+          <p>Pizza</p>
+        </div>
+        <div class="category">
+          <img src="https://i.ibb.co/tTPZNp9q/chicken.jpg" alt="Chicken" />
+          <p>Chicken</p>
+        </div>
+        <div class="category">
+          <img src="https://i.ibb.co/Fq67Br3z/burger.jpg" alt="Burger" />
+          <p>Burger</p>
+        </div>
+        <div class="category">
+          <img src="https://i.ibb.co/VW90kypr/thali.jpg" alt="Thali" />
+          <p>Thali</p>
+        </div>
+        <div class="category">
+          <img src="https://i.ibb.co/B5qf1BQZ/cake.jpg" alt="cake" />
+          <p>Cake</p>
+        </div>
+        <div class="category">
+          <img src="https://i.ibb.co/nshymPWK/northindian.jpg" alt="North Indian" />
+          <p>North Indian</p>
+        </div>
+        <div class="category">
+          <img src="https://i.ibb.co/zT9SJFqm/sandwich.jpg" alt="Sandwich" />
+          <p>Sandwich</p>
+        </div>
+        <div class="category">
+          <img src="https://i.ibb.co/gMp19RvM/rolls.jpg" alt="Rolls" />
+          <p>Rolls</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Top Brands Section -->
+    <section class="section">
+      <h2>Top brands for you</h2>
+      <div class="scroll-row">
+        <div class="brand">
+          <img src="https://i.ibb.co/YTK0HqsG/mc-Donalds.jpg" />
+          <p>McDonald's</p>
+        </div>
+        <div class="brand">
+          <img src="https://i.ibb.co/Lzy81WPF/burgerking.png" />
+          <p>Burger King</p>
+        </div>
+        <div class="brand">
+          <img src="https://i.ibb.co/mrqq77GS/crazy-cheesy.jpg" />
+          <p>Crazy Cheesy</p>
+        </div>
+        <div class="brand">
+          <img src="https://i.ibb.co/gb4cX5Yx/kfc.jpg" />
+          <p>KFC</p>
+        </div>
+        <div class="brand">
+          <img src="https://i.ibb.co/CpKcMkLr/aroma.jpg" />
+          <p>Aroma's Hyderabad House</p>
+        </div>
+        <div class="brand">
+          <img src="https://i.ibb.co/tM3bxc5W/natural.jpg" />
+          <p>Natural Ice Cream</p>
+        </div>
+        
+      </div>
+    </section>
+  </section>
+  <section class="section js-main-section" id="delivery-section" style="display:none;">
+    <!-- Copy the same content as dining-section here for now -->
+    <!-- Inspiration Section -->
+    <!-- <section class="section">
+      <h2>Inspiration for your first order</h2>
+      <div class="scroll-row">
+        <div class="category">
+          <img src="https://source.unsplash.com/80x80/?biryani" alt="Biryani" />
+          <p>Biryani</p>
+        </div>
+        <div class="category">
+          <img src="https://source.unsplash.com/80x80/?pizza" alt="Pizza" />
+          <p>Pizza</p>
+        </div>
+        <div class="category">
+          <img src="https://source.unsplash.com/80x80/?chicken" alt="Chicken" />
+          <p>Chicken</p>
+        </div>
+        <div class="category">
+          <img src="https://source.unsplash.com/80x80/?burger" alt="Burger" />
+          <p>Burger</p>
+        </div>
+        <div class="category">
+          <img src="https://source.unsplash.com/80x80/?thali" alt="Thali" />
+          <p>Thali</p>
+        </div>
+        <div class="category">
+          <img src="https://source.unsplash.com/80x80/?fried-rice" alt="Fried Rice" />
+          <p>Fried Rice</p>
+        </div>
+      </div>
+    </section> -->
+    <!-- Top Brands Section -->
+    <section class="section">
+      <h2>Top brands for you</h2>
+      <div class="scroll-row">
+        <div class="brand">
+          <img src="https://1000logos.net/wp-content/uploads/2021/05/McDonalds-logo.png" />
+          <p>McDonald's<br><small>35 min</small></p>
+        </div>
+        <div class="brand">
+          <img src="https://1000logos.net/wp-content/uploads/2017/03/Burger-King-logo.png" />
+          <p>Burger King<br><small>43 min</small></p>
+        </div>
+        <div class="brand">
+          <img src="https://via.placeholder.com/80x80.png?text=Crazy+Cheesy" />
+          <p>Crazy Cheesy<br><small>35 min</small></p>
+        </div>
+        <div class="brand">
+          <img src="https://1000logos.net/wp-content/uploads/2021/04/KFC-logo.png" />
+          <p>KFC<br><small>36 min</small></p>
+        </div>
+        <div class="brand">
+          <img src="https://via.placeholder.com/80x80.png?text=Rolls+Mania" />
+          <p>Rolls Mania<br><small>35 min</small></p>
+        </div>
+        <div class="brand">
+          <img src="https://1000logos.net/wp-content/uploads/2021/04/Subway-logo.png" />
+          <p>Subway<br><small>34 min</small></p>
+        </div>
+      </div>
+    </section>
+  </section>
+  <section class="section js-main-section" id="nightlife-section" style="display:none;">
+    <!-- Nightlife Collections will be rendered here by JS -->
+    <div id="nightlife-collections"></div>
+  </section>
+
+  <!-- Sign Up Modal -->
+  <div id="signup-modal" class="modal-overlay" style="display:none;">
+    <div class="modal">
+      <span class="modal-close" id="close-signup">&times;</span>
+      <h2>Sign up</h2>
+      <input type="text" placeholder="Full Name" class="modal-input" id="signup-name" />
+      <input type="email" placeholder="Email" class="modal-input" id="signup-email" />
+      <input type="password" placeholder="Password" class="modal-input" id="signup-password" />
+      <div class="modal-checkbox">
+        <input type="checkbox" id="signup-terms" />
+        <label for="signup-terms">
+          I agree to Zomato's <a href="#">Terms of Service, Privacy Policy and Content Policies</a>
+        </label>
+      </div>
+      <button class="modal-btn" id="signup-btn" disabled>Create account</button>
+      <div class="modal-or">or</div>
+      <button class="modal-google-btn">Sign in with Google</button>
+      <div class="modal-footer">
+        Already have an account? <a href="#" id="show-login">Log in</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Log In Modal (optional, for switching) -->
+  <div id="login-modal" class="modal-overlay" style="display:none;">
+    <div class="modal">
+      <span class="modal-close" id="close-login">&times;</span>
+      <h2>Log in</h2>
+      <input type="email" placeholder="Email" class="modal-input" id="login-email" />
+      <input type="password" placeholder="Password" class="modal-input" id="login-password" />
+      <button class="modal-btn" id="login-btn">Log in</button>
+      <div class="modal-or">or</div>
+      <button class="modal-google-btn">Sign in with Google</button>
+      <div class="modal-footer">
+        Don't have an account? <a href="#" id="show-signup">Sign up</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
