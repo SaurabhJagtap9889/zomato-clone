@@ -33,7 +33,7 @@ lerna-debug.log*
 Thumbs.db
 
 # Build
-dist/
+# //dist/
 build/
 .next/
 out/
