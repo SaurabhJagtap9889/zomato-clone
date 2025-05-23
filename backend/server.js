@@ -21,9 +21,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // API Routes
-app.use('/api/restaurants', require('./routes/restaurants'));
+// app.use('/api/restaurants', require('./routes/restaurants'));
 app.use('/api/orders', require('./routes/orders'));
-app.use('/api/users', require('./routes/users'));
+// app.use('/api/users', require('./routes/users'));
+app.use('/api', require('./routes/api'));
 
 // Test route
 app.get('/api/hello', (req, res) => {
